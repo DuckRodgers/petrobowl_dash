@@ -2,7 +2,7 @@
 
 A WebApp to manage games and inform performance from two teams.
 
-#How-to
+## How-to
 Just select the team, run the clock and wait for it to run out. If what runs out first is your patience, you can always click "Reset" and restart the clock. Each right question is worth +10 points, each wrong one is worth -05.
 
 Good luck!
