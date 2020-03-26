@@ -36,11 +36,11 @@ function StopBox() {
 }
 
 function ClearBox(){
+	document.getElementById("play_butt").innerHTML = "Play";
 	minutes = 8;
 	seconds = 0;
 	clearInterval(timeout);
 	document.getElementById("timer_slot").innerHTML = "0" + minutes + ":" + "0" + seconds;
-	document.getElementById("play_butt").innerHTML = "Play";
 }
 
 //-------------------------------------------
