@@ -59,114 +59,83 @@
 			
 			</pre>
 			
+			<div class="container text-center">
+				<h1 id="timer_slot"> 08:00 </h1>
+				<button type="button" class="btn btn-success" id="play_butt" onclick="time_trigger()"> Play </button>
+				<button type="button" class="btn btn-danger" onclick="StopBox()"> Stop </button>
+				<button type="button" class="btn btn-dark" onclick="ClearBox()"> Reset </button>
+			</div>
+			
+			<pre>
+			
+			</pre>
+			
 			<div class="row text-center">
 				<div class="col">
 				<h3> Team 1 </h3>
 				<div class="col text-center">
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel1">
+
 					</select>
 				</ul>
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm"  id="sel2">
+ 
 					</select>
 				</ul>
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel3">
+
 					</select>
 				</ul>
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel4">
+
 					</select>
 				</ul>
 				</div>
 				</div>
 				<div class="col">
-				<h3> Team 2 </h3>
-				<div class="col text-center">
+					<h3> Team 2 </h3>
+					<div class="col text-center">
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel5">
+
 					</select>
 				</ul>
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel6">
+
 					</select>
 				</ul>
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel7">
+
 					</select>
 				</ul>
 				<ul> 
-					<select class="form-control form-control-sm">
-  						<option>teste</option>
-						<option>jackson</option>
-						<option>yuri</option>
-						<option>maria</option>
-						<option>vinicius</option>
-						<option>clara</option>
-						<option>marco</option>
-						<option>higor</option>
+					<select class="form-control form-control-sm" id="sel8">
+
 					</select>
 				</ul>
 				</div>
 				</div>
 			</div>
+
+		<script>	
+			var players = ["Clara Natalino", "Higor Almeida", "Jackson Fonseca", " Marco Gemaque","Marian Pedrosa", "Vinicius", "Yuri"];
+			var teste = ["sel1", "sel2", "sel3", "sel4", "sel5", "sel6", "sel7", "sel8"]
+			var i;
+			var j;
+			for (i = 0; i < teste.length; i++) {
+				text = "";
+				for (j = 0; j < players.length; j++) {
+					text += "<option>" + players[j] + "</option>";
+				}
+				document.getElementById(teste[i]).innerHTML = text;
+			}
+		</script>
 			
 			<div class="row text-center">
 				<div class="col" id="t1_score"> 0 </div>
