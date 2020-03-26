@@ -40,6 +40,7 @@ function ClearBox(){
 	seconds = 0;
 	clearInterval(timeout);
 	document.getElementById("timer_slot").innerHTML = "0" + minutes + ":" + "0" + seconds;
+	document.getElementById("play_butt").innerHTML = "Playing";
 }
 
 //-------------------------------------------
