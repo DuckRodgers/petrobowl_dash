@@ -21,10 +21,10 @@ This is still Phase 1 of the project. Only a gameclock, score and player's name.
 
 ## Planned Improvements
 
-Next phase will be creating the actual game based on the input of a standard file. Another future implementation is an actual dashboard to evaluate how is each player performing.
+Phase 2: Dashboard to check performance and online room with a buzzer to mark the players.
 
 ## Contact
 
-Call us through GitHub, we are locked somewhere in here and can't seem to get out.
+Call us through GitHub, we are locked in here and can't get out. Or find us at petrobowluff@gmail.com
 
 Tell my mom I'm ok.
