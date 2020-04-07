@@ -1,0 +1,258 @@
+<!-- DOCTYPE HTML -->
+<html>
+	<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		
+		.pp_logo {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 35%;
+		}
+		
+		input[type=text], select {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		
+	</style>
+	
+	<script src="https://kit.fontawesome.com/fca740af9c.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/uff_petrobowl_dash/javascript_petrobowl.js"></script>
+	
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript">
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		function drawChart() {
+			var data = google.visualization.arrayToDataTable([
+				['Age', 'Weight'],
+				[ 8,      12],
+				[ 4,      5.5],
+				[ 11,     14],
+				[ 4,      5],
+				[ 3,      3.5],
+				[ 6.5,    7]
+			]);
+
+			var options = {
+				title: 'Age vs. Weight comparison',
+				hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+				vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+				legend: 'none'
+			};
+
+			var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
+
+			chart.draw(data, options);
+		}
+	</script>
+		
+		<title> Petrobowl Quizzify </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+	</head>
+		
+	<body>
+		
+		<header>
+			<nav class="navbar static-top navbar-expand-lg navbar-light scrolling-navbar" style="background-color: white;">
+				<a class="navbar-brand" href="#"><strong> Menu </strong></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" <span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+     					<ul class="navbar-nav mr-auto">
+        					<li class="nav-item active">
+         		 				<a class="nav-link" href="#"> Home <span class="sr-only">(current)</span></a>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="/players.html"> The Players </a>
+        					</li>
+        					<li class="nav-item">
+          						<a class="nav-link" href="https://github.com/DuckRodgers/uff_petrobowl_dash"> GitHub App Repository </a>
+        					</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/dashboard.html"> Dashboard </a>
+							</li>
+      					</ul>
+    				</div>
+			</nav>
+		</header>
+			
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img src="/uff_petrobowl_dash/pp.jpg" class="pp_logo">
+				</div>
+			</div>
+		</div>
+			
+		<div class="container-xl p-3 my-3 bg-dark text-white text-center">
+			<p id="counter_8"><h1> UFF Team Quiziffy </h1></p>
+			<h4> Dashboard </h4>
+		</div>
+		
+		<main role="main" class="container">
+			<div class="row">
+				<div class="col-md-8 blog-main">
+					<h3 class="pb-3 mb-4 font-italic border-bottom">
+						About the Dashboard
+					</h3>
+					
+					<div class="blog-post">
+						<p> 
+							The App is built to read excel files by using a JavaScript function. 
+							We provide both a model and an example of what the dashboard can do, right below.
+							Make sure your excel file follows the format so that Tableau can read and deploy the
+							Dashboard.
+						</p>
+					</div>
+				</div>
+				<aside class="col-md-4 blog-sidebar">
+					<div class="p-3 mb-3 bg-light rounded">
+						<h4 class="font-italic"> Safety </h4>
+						<p class="mb-0">
+							We don't store any files, so your excel should be uploaded each different session for the app.
+						</p>
+					</div>
+				</aside>
+			</div>
+		</main>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Question</th>
+								<th scope="col">Answer</th>
+								<th scope="col">Subject</th>
+								<th scope="col">Source</th>
+								<th scope="col">Responsible</th>
+								<th scope="col">Right/Wrong</th>
+								<th scope="col">Quizer</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+									<td>When was SPE founded?</td>
+									<td>1957</td>
+									<td>SPE</td>
+									<td>SPE</td>
+									<td>0</td>
+									<td>Player 1</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+									<td>When was USA's first Well drilled?</td>
+									<td>1859</td>
+									<td>Non-Technical</td>
+									<td>SPE Timeline</td>
+									<td>1</td>
+									<td>Player 2</td>
+								
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+									<td>Oil whose API gravity is below 10?</td>
+									<td>Ultra heavy oil</td>
+									<td>Reservoir</td>
+									<td>PetroWiki</td>
+									<td>-1</td>
+									<td>Player 3</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div>
+				<p>
+					For the "Right/Wrong" column, we consider three values:
+						<ul>
+							<li> -1: The player missed the question </li>
+							<li> 0: Nobody buzzed for the question </li>
+							<li> 1: The player got the question right </li>
+						</ul>
+				</p>
+			</div>
+		</div>
+		
+		<main role="main" class="container">
+			<div class="row">
+				<div class="col-md-8 blog-main">
+					<h3 class="pb-3 mb-4 font-italic border-bottom">
+						Dashboard
+					</h3>
+				</div>
+			</div>
+		</main>
+		
+		<div id="chart_div" style="width: 900px; height: 500px;"></div>
+		
+		<pre>
+		
+		</pre>
+		
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		
+		<!-- FOOTER -->
+		<hr />
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<p text-align: center;><strong> ABOUT US </strong></br>
+					</br>
+					Basic Contact Information </br>
+					<p> </p>
+					<div>
+						<i class="fas fa-book"></i><strong> Address </strong>
+						</br> Rua Passo da Pátria, 152
+						</br> PETROPET ROOM
+						</br> Niterói, RJ - Brazil
+						</br> <p> </p>
+					</div>
+					<div>
+						<i class="fas fa-envelope"></i><strong> Talk to us? </strong>
+						</br> petrobowluff@gmail.com
+						</br> <p> </p>
+					</div>
+					</p>
+				</div>
+				<div class="col-sm-6">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1"><strong> CONNECT WITH US </strong></label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							<label for="exampleFormControlTextarea1"><strong> TELL US WHAT YOU NEED </strong></label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							<p> </p>
+							<div class="btn-group">
+								<button type="button" class="btn btn-primary"> Send </button>
+							</div>
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else. We pinky swear. </small>
+							<i class="fa fa-facebook-official" style="font-size:24px"></i> <i class="fa fa-google" style="font-size:24px"></i> <i class="fa fa-github-alt" style="font-size:24px"></i>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<small> Developed patiently by Busterlock </small>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
