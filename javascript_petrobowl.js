@@ -15,6 +15,10 @@ function PlayBox() {
 		if (tick == true)
 		{
 			seconds -= 1;
+			if (seconds == 0 && minutes == 0)
+			{
+				seconds = 00;
+			}
 			if (seconds < 0 && minutes != 0)
 			{
 				minutes -= 1;
@@ -22,7 +26,14 @@ function PlayBox() {
 			}
 		}
 		document.getElementById("play_butt").innerHTML = "Playing";
-		document.getElementById("timer_slot").innerHTML = minutes + ":" + seconds;
+		if (seconds < 10)
+		{
+			document.getElementById("timer_slot").innerHTML = minutes + ":" + "0" + seconds;
+		}
+		else
+		{
+			document.getElementById("timer_slot").innerHTML = minutes + ":" + seconds;
+		}
 	}
 	tick = false;
 }
