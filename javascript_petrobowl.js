@@ -38,7 +38,7 @@ function PlayBox() {
 	tick = false;
 }
 function time_trigger() {
-	timeout = setInterval("PlayBox()", 10);
+	timeout = setInterval("PlayBox()", 1000);
 }
 
 function StopBox() {
