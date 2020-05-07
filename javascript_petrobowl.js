@@ -9,13 +9,13 @@ var timeout;
 
 function PlayBox() {
 	
-	if (minutes > 0 && seconds >= 0 || minutes == 1 && seconds >= 0 )
+	if (minutes >= 0 && seconds >= 0)
 	{
 		tick = true;
 		if (tick == true)
 		{
 			seconds -= 1;
-			if (seconds < 0)
+			if (seconds < 0 && minutes != 0)
 			{
 				minutes -= 1;
 				seconds = 59;
