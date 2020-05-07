@@ -15,7 +15,7 @@ function PlayBox() {
 		if (tick == true)
 		{
 			seconds -= 1;
-			if (seconds == 0 && minutes == 0)
+			if (seconds < 0 && minutes == 0)
 			{
 				seconds = 00;
 			}
