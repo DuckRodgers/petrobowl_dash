@@ -15,10 +15,6 @@ function PlayBox() {
 		if (tick == true)
 		{
 			seconds -= 1;
-			if (seconds < 0 && minutes == 0)
-			{
-				seconds = 00;
-			}
 			if (seconds < 0 && minutes != 0)
 			{
 				minutes -= 1;
@@ -33,6 +29,10 @@ function PlayBox() {
 		else
 		{
 			document.getElementById("timer_slot").innerHTML = minutes + ":" + seconds;
+		}
+		if (seconds == -1)
+		{
+			document.getElementById("timer_slot").innerHTML = minutes + ": 00";
 		}
 	}
 	tick = false;
