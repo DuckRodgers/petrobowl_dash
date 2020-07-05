@@ -25,6 +25,6 @@ Phase 2: Dashboard to check performance and online room with a buzzer to mark th
 
 ## Contact
 
-Call us through GitHub, we are locked in here and can't get out. Or find us at petrobowluff@gmail.com
+Call us through GitHub, we are locked in here and can't get out.
 
 Tell my mom I'm ok.
