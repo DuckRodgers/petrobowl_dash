@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_file
 import pandas as pd
 from gamefy import game_maker #Locally created code to create the games
 import os
+from datetime import date
 
 app = Flask(__name__)
 
@@ -15,7 +16,9 @@ def upload():
         file = request.files['file']
         df = pd.read_excel(file)
         df = game_maker(df) #Call the function
-        return send_file(df, as_attachment=True, attachment_filename="mydownload.xlsx")
+        today = date.today()
+        filename = today+".xlsx"
+        return send_file(df, as_attachment=True, attachment_filename=filename)
     else:
         return render_template('upload.html')
 
